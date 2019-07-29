@@ -1,0 +1,53 @@
+#rutinas-searchbar #searchText {
+  width: 90%;
+  width: calc(100% - 50px);
+}
+
+.calendario-semanal-rutina {
+  display: flex;
+  flex-fow: row nowrap;
+  justify-content: space-between;
+}
+
+.calendario-semanal-rutina>.calendario-dia {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: stretch;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.calendario-semanal-rutina>.calendario-dia:nth-child(2n) {
+  background-color: #3c3b3b24;
+}
+
+.calendario-semanal-rutina>.calendario-dia:nth-child(2n + 1) {
+  background-color: #c3262630;
+}
+
+.calendario-semanal-rutina>.calendario-dia .actividad {
+  margin: 1rem;
+}
+
+.calendario-semanal-rutina>.calendario-dia .actividad>.card-body.actions {
+  opacity: 0;
+  max-height: 0;
+  padding: 0 1.25rem;
+  transform: translateY(-100%);
+  transition-property: opacity, transform, max-height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.calendario-semanal-rutina>.calendario-dia .actividad:hover>.card-body.actions {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 48px;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+.calendario-semanal-rutina>.calendario-dia .actividad:first-of-type *[data-action='up'],
+.calendario-semanal-rutina>.calendario-dia .actividad:last-of-type *[data-action='down'] {
+  color: gray;
+}

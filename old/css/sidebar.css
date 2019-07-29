@@ -1,0 +1,31 @@
+/* sidebar style definition */
+.sidebar {
+  position: fixed;
+  /* 86px = header height*/
+  top: 86px;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar>.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-item .nav-link {
+  transition-property: background-color;
+}
+
+.sidebar .nav-item .nav-link {
+  transition-duration: 0.125s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+}

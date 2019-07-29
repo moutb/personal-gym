@@ -1,0 +1,90 @@
+-- DATOS CALENDARIO
+INSERT INTO CALENDARIO VALUES (1, 'calendario primavera', 1, 5);
+INSERT INTO CALENDARIO VALUES (2, 'calendario verano', 6, 8);
+
+ALTER SEQUENCE seq_calendario_id_calendario INCREMENT BY 3;
+SELECT  seq_calendario_id_calendario.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_calendario_id_calendario INCREMENT BY 1;
+
+-- DATOS CLASE
+INSERT INTO CLASE VALUES (1, 'Yoga', 'CLYOGA');
+INSERT INTO CLASE VALUES (2, 'Spinning', 'CLSPINNING');
+INSERT INTO CLASE VALUES (3, 'Step', 'CLSTEP');
+
+ALTER SEQUENCE seq_clase_id_clase INCREMENT BY 4;
+SELECT  seq_calendario_id_calendario.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_calendario_id_calendario INCREMENT BY 1;
+
+-- DATOS TIPO CUOTA
+INSERT INTO TIPO_CUOTA VALUES ('MITAD_MENSUAL', 0.5);
+INSERT INTO TIPO_CUOTA VALUES ('MENSUAL', 1);
+INSERT INTO TIPO_CUOTA VALUES ('TRIMESTRAL', 3);
+INSERT INTO TIPO_CUOTA VALUES ('ANUAL', 12);
+
+-- DATOS CLIENTE
+
+INSERT INTO CLIENTE VALUES(1, 'test', 'test', TO_DATE('1999/12/12', 'yyyy/mm/dd'), 'street, 0', 41005, '987654321', 'test@test.com', SYSDATE, null, null);
+
+ALTER SEQUENCE seq_cliente_id_cliente INCREMENT BY 2;
+SELECT  seq_calendario_id_calendario.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_calendario_id_calendario INCREMENT BY 1;
+
+-- DATOS CUOTA
+INSERT INTO CUOTA VALUES (1, TO_DATE('2019/01/01', 'yyyy/mm/dd'), 30.00, 'MITAD_MENSUAL', 1);
+INSERT INTO CUOTA VALUES (2, TO_DATE('2019/01/16', 'yyyy/mm/dd'), 30.00, 'MITAD_MENSUAL', 1);
+INSERT INTO CUOTA VALUES (3, TO_DATE('2019/02/01', 'yyyy/mm/dd'), 30.00, 'MITAD_MENSUAL', 1);
+INSERT INTO CUOTA VALUES (4, TO_DATE('2019/02/15', 'yyyy/mm/dd'), 30.00, 'MITAD_MENSUAL', 1);
+
+ALTER SEQUENCE seq_cuota_id_cuota INCREMENT BY 5;
+SELECT  seq_calendario_id_calendario.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_calendario_id_calendario INCREMENT BY 1;
+
+-- DATOS COMPRA
+INSERT INTO COMPRA VALUES (1, 'compra de prueba', 40, SYSDATE);
+INSERT INTO COMPRA VALUES (2, 'compra de prueba 2', 100, TO_DATE('2018/12/10', 'YYYY/MM/DD'));
+
+ALTER SEQUENCE seq_compra_id_compra INCREMENT BY 3;
+SELECT  seq_compra_id_compra.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_compra_id_compra INCREMENT BY 1;
+
+-- DATOS PRODUCTO
+INSERT INTO PRODUCTO VALUES (1, 'Guantes entrenamiento', 4);
+INSERT INTO PRODUCTO VALUES (2, 'Esponja manos', 12);
+INSERT INTO PRODUCTO VALUES (3, 'Recuperador post entreno', 10);
+INSERT INTO PRODUCTO VALUES (4, 'Cinturon fuerzan', 2);
+INSERT INTO PRODUCTO VALUES (5, 'Proteina', 12);
+INSERT INTO PRODUCTO VALUES (6, 'Preentreno', 10);
+INSERT INTO PRODUCTO VALUES (7, 'Gomas elasticas Suave', 4);
+INSERT INTO PRODUCTO VALUES (8, 'Gomas elasticas Media', 12);
+INSERT INTO PRODUCTO VALUES (9, 'Gomas elasticas Dura', 10);
+INSERT INTO PRODUCTO VALUES (10, 'BCCA', 4);
+INSERT INTO PRODUCTO VALUES (11, 'Barritas de proteina', 12);
+INSERT INTO PRODUCTO VALUES (12, 'Zapatillas halterofilia', 10);
+
+ALTER SEQUENCE seq_producto_id_producto INCREMENT BY 13;
+SELECT  seq_producto_id_producto.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_producto_id_producto INCREMENT BY 1;
+
+-- DATOS PRODUCTO_X_COMPRA
+INSERT INTO PRODUCTO_X_COMPRA VALUES(1, 1, 3.50, 4);
+INSERT INTO PRODUCTO_X_COMPRA VALUES(1, 2, 2.00, 12);
+INSERT INTO PRODUCTO_X_COMPRA VALUES(2, 3, 10.00, 10);
+
+-- DATOS VENTA
+INSERT INTO VENTA VALUES (1, 'venta de prueba', 20, SYSDATE);
+
+ALTER SEQUENCE seq_venta_id_venta INCREMENT BY 2;
+SELECT  seq_venta_id_venta.NEXTVAL FROM dual;
+ALTER SEQUENCE seq_venta_id_venta INCREMENT BY 1;
+
+-- DATOS PRODUCTO_X_VENTA
+INSERT INTO PRODUCTO_X_VENTA VALUES(1, 3, 10.00, 2);
+
+-- EJERCICIOS
+INSERT INTO EJERCICIOS VALUES(NULL, 'Press banca', 'TIPEJERPECTORAL');
+INSERT INTO EJERCICIOS VALUES(NULL, 'Bicicleta estática', 'TIPEJERCARDIO');
+INSERT INTO EJERCICIOS VALUES(NULL, 'Press francés MANC', 'TIPEJERTRICEPS');
+
+ALTER SEQUENCE seq_ejercicio_id_ejercicio INCREMENT BY 3;
+SELECT  seq_ejercicio_id_ejercicio .NEXTVAL FROM dual;
+ALTER SEQUENCE seq_ejercicio_id_ejercicio INCREMENT BY 1;

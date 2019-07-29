@@ -1,0 +1,51 @@
+.white-color {
+  color: #f8f9fa;
+}
+
+.white-color-hover:hover {
+  color: #f8f9fa;
+}
+
+.white-bg {
+  background-color: #f8f9fa;
+}
+
+.white-border {
+  border-color: #f8f9fa;
+}
+
+.red-color {
+  color: #c32626;
+}
+
+.red-color-hover:hover {
+  color: #c32626;
+}
+
+.red-bg {
+  background-color: #c32626;
+}
+
+.red-bg-hover:hover {
+  background-color: #c32626;
+}
+
+.red-border {
+  border-color: #c32626;
+}
+
+.black-color {
+  color: #3c3b3b;
+}
+
+.black-color-hover:hover {
+  color: #3c3b3b;
+}
+
+.black-bg {
+  background-color: #3c3b3b;
+}
+
+.black-border {
+  border-color: #3c3b3b;
+}
